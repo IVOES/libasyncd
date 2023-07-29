@@ -1,0 +1,47 @@
+src/ad_http_handler.c:419:9: portability: %jd in format string (no. 1) requires 'intmax_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+        WARN("Failed to add data to out-buffer. (size:%jd)", size);
+        ^
+src/ad_http_handler.c:750:5: warning: %x in format string (no. 1) requires 'unsigned int *' but the argument type is 'signed int *'. [invalidScanfArgType_int]
+    sscanf(line, "%x", &chunksize);
+    ^
+src/ad_server.c:648:74: style:inconclusive: Function 'listener_cb' argument 2 names different: declaration 'evsocket' definition 'socket'. [funcArgNamesDifferent]
+static void listener_cb(struct evconnlistener *listener, evutil_socket_t socket,
+                                                                         ^
+src/ad_server.c:86:41: note: Function 'listener_cb' argument 2 names different: declaration 'evsocket' definition 'socket'.
+                        evutil_socket_t evsocket, struct sockaddr *sockaddr,
+                                        ^
+src/ad_server.c:648:74: note: Function 'listener_cb' argument 2 names different: declaration 'evsocket' definition 'socket'.
+static void listener_cb(struct evconnlistener *listener, evutil_socket_t socket,
+                                                                         ^
+src/ad_server.c:543:0: style: The function 'ad_conn_get_socket' is never used. [unusedFunction]
+
+^
+src/ad_http_handler.c:148:0: style: The function 'ad_http_get_content_length' is never used. [unusedFunction]
+
+^
+src/ad_http_handler.c:157:0: style: The function 'ad_http_get_content_length_stored' is never used. [unusedFunction]
+
+^
+src/ad_http_handler.c:123:0: style: The function 'ad_http_get_inbuf' is never used. [unusedFunction]
+
+^
+src/ad_http_handler.c:128:0: style: The function 'ad_http_get_outbuf' is never used. [unusedFunction]
+
+^
+src/ad_http_handler.c:394:0: style: The function 'ad_http_send_chunk' is never used. [unusedFunction]
+
+^
+src/ad_server.c:454:0: style: The function 'ad_server_get_ssl_ctx' is never used. [unusedFunction]
+
+^
+src/ad_server.c:461:0: style: The function 'ad_server_get_stats' is never used. [unusedFunction]
+
+^
+src/ad_server.c:352:0: style: The function 'ad_server_global_free' is never used. [unusedFunction]
+
+^
+src/ad_server.c:287:0: style: The function 'ad_server_stop' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
