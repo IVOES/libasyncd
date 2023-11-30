@@ -2,3 +2,4 @@
 
 sudo apt install libevent-dev
 ./configure
+make
